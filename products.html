@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sbjiwala - Products</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1>Sbjiwala</h1>
+<p>Fresh Vegetables Delivered to Your Doorstep</p>
+</header>
+<nav>
+<a href="index.html">Home</a>
+<a href="products.html">Products</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
+<section class="products">
+<div class="product">
+<img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce" alt="Tomatoes">
+<h3>Tomatoes</h3>
+<p>₹40 / kg</p>
+<button onclick="openPopup('Tomatoes')">Buy Now</button>
+</div>
+<div class="product">
+<img src="https://images.unsplash.com/photo-1582515073490-399813f5d9c5" alt="Potatoes">
+<h3>Potatoes</h3>
+<p>₹30 / kg</p>
+<button onclick="openPopup('Potatoes')">Buy Now</button>
+</div>
+<div class="product">
+<img src="https://images.unsplash.com/photo-1582515073470-12345abcd" alt="Carrots">
+<h3>Carrots</h3>
+<p>₹50 / kg</p>
+<button onclick="openPopup('Carrots')">Buy Now</button>
+</div>
+</section>
+<!-- Popup Form -->
+<div id="orderPopup" class="popup">
+<div class="popup-content">
+<span class="close" onclick="closePopup()">&times;</span>
+<h2>Order <span id="productName"></span></h2>
+<form onsubmit="submitOrder(event)">
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="text" id="phone" placeholder="Phone" required>
+<input type="text" id="address" placeholder="Address" required>
+<input type="number" id="quantity" placeholder="Quantity (kg)" required>
+<input type="submit" value="Place Order">
+</form>
+<p id="thankYou" style="display:none; color:green;">Thank you for your order! We’ll contact you soon.</p>
+</div>
+</div>
+<footer>&copy; 2025 Sbjiwala. All rights reserved.</footer>
+<script src="script.js"></script>
+</body>
+</html>
